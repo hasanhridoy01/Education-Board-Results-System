@@ -1,0 +1,17 @@
+{
+    "name": "hridoy/edu-board-results",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "hridoy",
+            "email": "hasanhridoy1367@gmail.com"
+        }
+    ],
+    "autoload" : {
+        "psr-4" : {
+            "Edu\\Board\\"  : "app"
+        }
+    },
+    "require": {}
+}
