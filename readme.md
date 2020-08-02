@@ -29,9 +29,9 @@ use PDO;
 abstract class Database
 {
 	
-	 /**
-	  * Server Information Property
-	  */
+/**
+* Server Information Property
+*/
   private $host = HOST;
   private $user = USER;
   private $pass = PASS;
