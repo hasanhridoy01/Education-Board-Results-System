@@ -1,6 +1,11 @@
 <?php 
 
    /**
+    * Session_Strat();
+    */
+   session_start();
+
+   /**
     * Server Related Information
     */
     define('HOST', 'localhost');
