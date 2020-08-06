@@ -46,11 +46,56 @@
         ];
 
       }
-     
+
+      /**
+       * 
+       */
+      public function dataCheckPro($tbl, array $data, $condition = 'AND')
+      {
+        
+        $query_string = '';
+        foreach ($data as $key => $value) {
+          
+          $query_string .= $key . "= '$value' $condition ";
+
+        }
+        $query_array = explode(' ', $query_string);
+        array_pop($query_array);
+        array_pop($query_array);
+
+        $final_query_string = implode(' ', $query_array);
+
+        $stmt = $this -> connection() -> prepare("SELECT * FROM $tbl WHERE $final_query_string");
+        $stmt -> execute();
+
+
+      }
+      
+      /**
+       * UpDate Method
+       */
+      public function upDate($tbl, $id, $data)
+      {
+         
+          $query_string = '';
+          foreach ($data as $key => $value) {
+            
+            $query_string .= "$key = '$value' , ";
+
+          }
+
+          $query_array = explode(' ', $query_string);
+          array_pop($query_array);
+          array_pop($query_array);
+
+          $final_query_string = implode(' ', $query_array);
+
+          $stmt = $this -> connection() -> prepare("UPDATE $tbl SET $final_query_string WHERE id='$id' ");
+          $stmt -> execute();
+
+      }
+
    }
-
-
-
 
 
 
