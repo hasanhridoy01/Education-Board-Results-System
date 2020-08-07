@@ -51,7 +51,10 @@
       */
      public function emailUsernameCheck($email_uname)
      {
-     	return $this -> dataCheck( 'userss' ,$email_uname);
+     	return $this -> dataCheck( 'userss' ,[
+              'email' => $email_uname,
+              'uname' => $email_uname,
+     	], 'OR');
      }
 
      /**

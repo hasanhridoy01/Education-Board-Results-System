@@ -29,28 +29,43 @@
 
       }
 
+
       /**
-       * Data Check Method
+       * Data Create Method
        */
-      public function dataCheck($tbl, $data)
+      public function create()
       {
         
-        $stmt = $this -> connection() -> prepare("SELECT * FROM $tbl WHERE email='$data' || uname='$data' ");
-        $stmt -> execute();
-
-        $nam = $stmt -> rowCount();
-
-        return [
-          'nam' => $nam,
-          'data' => $stmt
-        ];
-
       }
 
       /**
-       * 
+       * Data find Method by Id
        */
-      public function dataCheckPro($tbl, array $data, $condition = 'AND')
+      public function find($id)
+      {
+        
+      }
+
+      /**
+       * Data Delete Method
+       */
+      public function delete($id)
+      {
+        
+      }
+
+      /**
+       * Data Show Method
+       */
+      public function all()
+      {
+        
+      }
+
+      /**
+       * Data Check Method
+       */
+      public function dataCheck($tbl, array $data, $condition = 'AND')
       {
         
         $query_string = '';
@@ -67,6 +82,13 @@
 
         $stmt = $this -> connection() -> prepare("SELECT * FROM $tbl WHERE $final_query_string");
         $stmt -> execute();
+
+        $nam = $stmt -> rowCount();
+
+        return [
+           'nam' => $nam,
+           'data' => $stmt,
+        ];
 
 
       }
