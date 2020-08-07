@@ -92,54 +92,7 @@ $user = new User;
                             </tr>
                         </thead>
                         <tbody id="all_users_tbody">
-                           <tr>
-                              <td>01</td>
-                              <td>Hasan Hridoy</td>
-                              <td>hasanhridoy@gmail.com</td>
-                              <td>01701007493</td>
-                              <td>admin</td>
-                              <td>
-                                <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                              </td>
-                              <td>active</td>
-                              <td>
-                                <a href="" class="btn btn-sm btn-info">View</a>
-                                <a href="" class="btn btn-sm btn-warning">Edit</a>
-                                <a href="" class="btn btn-sm btn-danger">Delete</a>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>01</td>
-                              <td>Hasan Hridoy</td>
-                              <td>hasanhridoy@gmail.com</td>
-                              <td>01701007493</td>
-                              <td>admin</td>
-                              <td>
-                                <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                              </td>
-                              <td>active</td>
-                              <td>
-                                <a href="" class="btn btn-sm btn-info">View</a>
-                                <a href="" class="btn btn-sm btn-warning">Edit</a>
-                                <a href="" class="btn btn-sm btn-danger">Delete</a>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>01</td>
-                              <td>Hasan Hridoy</td>
-                              <td>hasanhridoy@gmail.com</td>
-                              <td>01701007493</td>
-                              <td>admin</td>
-                              <td>
-                                <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                              </td>
-                              <td>active</td>
-                              <td>
-                                <a href="" class="btn btn-sm btn-info">View</a>
-                                <a href="" class="btn btn-sm btn-warning">Edit</a>
-                                <a href="" class="btn btn-sm btn-danger">Delete</a>
-                              </td>
-                           </tr>
+                           
                         </tbody>
                     </table>
                 </section>
