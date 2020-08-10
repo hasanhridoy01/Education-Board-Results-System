@@ -104,6 +104,7 @@
                         $('form#add_student_form')[0].reset();
                         $('#add_student_modal').modal('hide');
                         $('.mess').html("<p class=\"alert alert-success\">Students Added Successfull ! <button class=\"close\" data-dismiss=\"alert\">&times;</button></p>");
+                         allStudent()
                     }
                  });
 
@@ -111,7 +112,19 @@
 
 
      });
+     
+     //Show all Student Method
+     function allStudent(){
 
+          $.ajax({
+             url : 'template/ajax/student_all.php',
+             success : function(data){
+                $('tbody#all_student_tbody').html(data);
+             }
+          });
+
+     }
+     allStudent()
 
 
    });

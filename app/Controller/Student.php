@@ -8,7 +8,7 @@
     * Students Managements System
     */
    class Student extends Database
-   {
+   { 
    	 
    	 /**
    	  * Add New Student Method
@@ -30,6 +30,15 @@
              'photo' => $file_name,
 
    	 	]);
+   	 }
+
+   	 /**
+   	  * Show All Students Method
+   	  */
+   	 public function allStudents()
+   	 {
+   	 	$data = $this -> all('students');
+   	 	return $data;
    	 }
 
    }

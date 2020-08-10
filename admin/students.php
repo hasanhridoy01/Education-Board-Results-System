@@ -142,66 +142,22 @@ $user = new User;
                     <header class="panel-heading"><span class="label bg-danger pull-right m-t-xs">4 left</span> All users Data</header>
                     <table class="table table-striped m-b-none">
                         <thead>
-                            <tr>
-                                <th>#</th>
-                                <th>Name</th>
-                                <th>email</th>
-                                <th>Cell</th>
-                                <th>Role</th>
-                                <th>Photo</th>
-                                <th>Status</th>
-                                <th>action</th>
+                             <tr>
+                              <th>#</th>
+                              <th>Name</th>
+                              <th>Role</th>
+                              <th>Reg</th>
+                              <th>Board</th>
+                              <th>Institute</th>
+                              <th>Examation</th>
+                              <th>Year</th>
+                              <th>Photo</th>
+                              <th>Status</th>
+                              <th>action</th>
                             </tr>
                         </thead>
                         <tbody id="all_student_tbody">
-                           <tr>
-                              <td>01</td>
-                              <td>Hasan Hridoy</td>
-                              <td>hasanhridoy@gmail.com</td>
-                              <td>01701007493</td>
-                              <td>admin</td>
-                              <td>
-                                <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                              </td>
-                              <td>active</td>
-                              <td>
-                                <a href="" class="btn btn-sm btn-info">View</a>
-                                <a href="" class="btn btn-sm btn-warning">Edit</a>
-                                <a href="" class="btn btn-sm btn-danger">Delete</a>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>01</td>
-                              <td>Hasan Hridoy</td>
-                              <td>hasanhridoy@gmail.com</td>
-                              <td>01701007493</td>
-                              <td>admin</td>
-                              <td>
-                                <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                              </td>
-                              <td>active</td>
-                              <td>
-                                <a href="" class="btn btn-sm btn-info">View</a>
-                                <a href="" class="btn btn-sm btn-warning">Edit</a>
-                                <a href="" class="btn btn-sm btn-danger">Delete</a>
-                              </td>
-                           </tr>
-                           <tr>
-                              <td>01</td>
-                              <td>Hasan Hridoy</td>
-                              <td>hasanhridoy@gmail.com</td>
-                              <td>01701007493</td>
-                              <td>admin</td>
-                              <td>
-                                <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                              </td>
-                              <td>active</td>
-                              <td>
-                                <a href="" class="btn btn-sm btn-info">View</a>
-                                <a href="" class="btn btn-sm btn-warning">Edit</a>
-                                <a href="" class="btn btn-sm btn-danger">Delete</a>
-                              </td>
-                           </tr>
+                           
                         </tbody>
                     </table>
                 </section>
