@@ -29,6 +29,30 @@
 
       }
 
+      /**
+     * file Upload With Database
+     */
+      protected function fileUpload($file, $location = '', $file_type = ['jpg','png','jpeg'])
+      {
+        
+        //file manage
+        $file_name = $file['name'];
+        $file_tmp = $file['tmp_name'];
+        $file_size = $file['size'];
+
+        //file extention
+        $file_array = explode('.', $file_name);
+        $file_name_extention = strtolower(end($file_array));
+
+        //unique_file Name
+        $unique_file_name = md5(time().rand()).".".$file_name_extention;
+
+        move_uploaded_file($file_tmp, $location . $unique_file_name);
+
+        return $unique_file_name;
+
+      }
+
 
       /**
        * Data Create Method
@@ -78,9 +102,12 @@
       /**
        * Data Delete Method
        */
-      public function delete($id)
+      public function delete($tbl, $id)
       {
-        
+        $sql = "DELETE FROM $tbl WHERE id='$id'" ;
+        $stmt = $this -> connection() -> prepare($sql);
+        $stmt -> execute();
+        return $stmt;
       }
 
       /**

@@ -56,6 +56,17 @@
     	return $data;
     }
 
+    //User Deleted Method
+    public function userDelete($id)
+    {
+      $data = $this -> delete('userss', $id);
+
+      if ( $data ) {
+        return true;
+      }
+      
+    }
+
    }
 
 
