@@ -124,7 +124,33 @@
           });
 
      }
-     allStudent()
+     allStudent();
+
+     //Students Deleted Section
+     $(document).on('click','a#student_delete', function(event){
+          event.preventDefault();
+          
+          let del = confirm('Are you sure');
+          let id = $(this).attr('student_id');
+
+          if ( del == true )
+          {
+             
+            $.ajax({
+               url : 'template/ajax/student_delete.php',
+               method : "POST",
+               data : { id : id },
+               success : function(data){
+                  $('.mess').html(data);
+                  allStudent();
+               }
+            });
+
+          }else{
+             return false;
+          }
+
+     });
 
 
    });

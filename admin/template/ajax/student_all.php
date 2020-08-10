@@ -28,7 +28,7 @@
   <td>
     <a class="btn btn-sm btn-info" href="#">View</a>
     <a class="btn btn-sm btn-warning" href="#">Edit</a>
-    <a class="btn btn-sm btn-danger" href="#">Delete</a>
+    <a id="student_delete" student_id="<?php echo $val['id'] ?>" class="btn btn-sm btn-danger" href="#">Delete</a>
   </td>
 </tr>
 

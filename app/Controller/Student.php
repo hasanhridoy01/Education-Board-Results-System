@@ -41,6 +41,15 @@
    	 	return $data;
    	 }
 
+   	 /**
+   	  * Student Delete Method
+   	  */
+   	 public function studentDelete($id)
+   	 {
+   	 	$data = $this -> delete('students', $id);
+   	 	return $data;
+   	 }
+
    }
 
 
