@@ -3,6 +3,7 @@
    namespace Edu\Board\Controller;
 
    use Edu\Board\Support\Database;
+   use PDO;
 
    /**
     * Students Managements System
@@ -49,6 +50,15 @@
    	 	$data = $this -> delete('students', $id);
    	 	return $data;
    	 }
+
+     /**
+      * Student Add Search
+      */
+     public function studentSearch($search)
+     {
+       $data = $this -> customQuery("SELECT * FROM students WHERE name LIKE '%$search%' || roll LIKE '%$search%' || reg LIKE '%$search%'");
+       return $data -> fetchAll(PDO::FETCH_ASSOC);
+     }
 
    }
 
