@@ -77,6 +77,15 @@
 
      }
 
+     /**
+      * Show All Result Mehtod
+      */
+     public function allResults()
+     {
+       $data = $this -> all('results');
+       return $data -> fetchAll(PDO::FETCH_ASSOC);
+     }
+
    }
 
 

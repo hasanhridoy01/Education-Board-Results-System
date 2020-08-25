@@ -85,64 +85,19 @@ $user = new User;
                   <thead>
                     <tr>
                       <th>#</th>
-                      <th>Name</th>
-                      <th>email</th>
-                      <th>Cell</th>
-                      <th>Role</th>
-                      <th>Photo</th>
+                      <th>Student_Id</th>
+                      <th>Bangla</th>
+                      <th>English</th>
+                      <th>Mathmatice</th>
+                      <th>Socal Science</th>
+                      <th>Socal</th>
+                      <th>Relation</th>
+                      <th>Grade</th>
                       <th>Status</th>
-                      <th>action</th>
                     </tr>
                   </thead>
-                  <tbody id="">
-                    <tr>
-                      <td>01</td>
-                      <td>Hasan Hridoy</td>
-                      <td>hasanhridoy@gmail.com</td>
-                      <td>01701007493</td>
-                      <td>admin</td>
-                      <td>
-                        <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                      </td>
-                      <td>active</td>
-                      <td>
-                        <a href="" class="btn btn-sm btn-info">View</a>
-                        <a href="" class="btn btn-sm btn-warning">Edit</a>
-                        <a href="" class="btn btn-sm btn-danger">Delete</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Hasan Hridoy</td>
-                      <td>hasanhridoy@gmail.com</td>
-                      <td>01701007493</td>
-                      <td>admin</td>
-                      <td>
-                        <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                      </td>
-                      <td>active</td>
-                      <td>
-                        <a href="" class="btn btn-sm btn-info">View</a>
-                        <a href="" class="btn btn-sm btn-warning">Edit</a>
-                        <a href="" class="btn btn-sm btn-danger">Delete</a>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td>01</td>
-                      <td>Hasan Hridoy</td>
-                      <td>hasanhridoy@gmail.com</td>
-                      <td>01701007493</td>
-                      <td>admin</td>
-                      <td>
-                        <img src="images/a6.png" alt="" style="height: 50px; width: 50px;">
-                      </td>
-                      <td>active</td>
-                      <td>
-                        <a href="" class="btn btn-sm btn-info">View</a>
-                        <a href="" class="btn btn-sm btn-warning">Edit</a>
-                        <a href="" class="btn btn-sm btn-danger">Delete</a>
-                      </td>
-                    </tr>
+                  <tbody id="all_result_data">
+                     
                   </tbody>
                 </table>
               </section>

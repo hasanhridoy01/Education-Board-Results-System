@@ -240,6 +240,18 @@
 
      });
 
+     //Show all function
+     function allResult(){
+
+          $.ajax({
+              url : 'template/ajax/result_all.php',
+              success : function(data){
+                 $('tbody#all_result_data').html(data);
+              }
+          });
+     }
+     allResult()
+
 
 
    });
