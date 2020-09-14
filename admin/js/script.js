@@ -252,6 +252,87 @@
      }
      allResult()
 
+     //Single Student Add Modal
+     $(document).on('click','a#all_student', function(e){
+           e.preventDefault();
+
+           //show student modal
+           $('#single_student_modal').modal('show');
+
+           //get value
+           let id = $(this).attr('student_view_id');
+
+           //ajax requiste
+           $.ajax({
+              url : 'template/ajax/show_single_student.php',
+              method : 'POST',
+              data : { id : id },
+              success : function(data){
+                  let json_obj = JSON.parse(data);
+
+                  $('img#single_student_img').attr('src', 'students/' + json_obj.photo);
+                  $('h2#single_name').text(json_obj.name);
+                  $('td#single_name').text(json_obj.name);
+                  $('td#single_roll').text(json_obj.roll);
+                  $('td#single_exam').text(json_obj.exam);
+                  $('td#single_board').text(json_obj.board);
+
+              }
+           });
+
+     });
+
+     //edit studnet 
+     $(document).on('click','#edit_student', function(event){
+        event.preventDefault();
+
+        let edit_id = $(this).attr('student_edit');
+
+        $.ajax({
+           url : 'template/ajax/student_edit.php',
+           data : { id : edit_id },
+           method : "POST",
+           success : function(data){
+               let edit_data = JSON.parse(data);
+               
+               $('#student_update_modal input[name="name"]').val(edit_data.name);
+               $('#student_update_modal input[name="student_id"]').val(edit_data.id);
+               $('#student_update_modal input[name="roll"]').val(edit_data.roll);
+               $('#student_update_modal input[name="reg"]').val(edit_data.reg);
+               $('#student_update_modal input[name="board"]').val(edit_data.board);
+               $('#student_update_modal input[name="inst"]').val(edit_data.inst);
+               $('#student_update_modal input[name="exam"]').val(edit_data.exam);
+               $('#student_update_modal input[name="year"]').val(edit_data.year);
+               $('#student_update_modal input[name="old_photo"]').val(edit_data.photo);
+               $('#student_update_modal img').attr('src', 'students/' + edit_data.photo);
+
+           }
+        });
+
+        //show student modal
+        $('#student_update_modal').modal('show');
+
+
+     });
+
+     //Update Student form Submit
+     $(document).on('submit', 'form#update_student_form', function(event){
+          event.preventDefault();
+
+          $.ajax({
+              url : 'template/ajax/update_student.php',
+              method : 'POST',
+              data : new FormData(this),
+              contentType : false,
+              processData : false,
+              success : function(data){
+                  $('#student_update_modal').modal('hide');
+                  $('.mess').html(sweetMsg('Student Updated Successfull'));
+              }
+          });
+
+     });
+
 
 
    });

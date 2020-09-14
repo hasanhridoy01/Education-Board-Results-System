@@ -127,6 +127,107 @@ $user = new User;
                 </div>
             </div>
          </div>
+
+          <!-- Single Student_show_modal -->
+          <div id="single_student_modal" class="modal fade">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  <h2 align="center"> Single Student Data </h2>
+                  <hr>
+                  
+                  <img id="single_student_img" src="media/student/Hridoy.jpeg" alt="" style="width: 250px; height: 250px; display: block; margin: auto; border-radius: 50%; border: 10px solid white; box-shadow: 5px 30px 30px #ccc;">
+                  <h2 id="single_name" align="center"></h2>
+
+                  <table class="table table-striped">
+                    <tr>
+                      <td>Name</td>
+                      <td id="single_name"></td>
+                    </tr>
+                    <tr>
+                      <td>Roll</td>
+                      <td id="single_roll"></td>
+                    </tr>
+                    <tr>
+                      <td>Exam</td>
+                      <td id="single_exam"></td>
+                    </tr>
+                    <tr>
+                      <td>Board</td>
+                      <td id="single_board"></td>
+                    </tr>
+                  </table>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+           <!-- Student_Update_modal -->
+          <div id="student_update_modal" class="modal fade">
+              <div class="modal-dialog">
+                  <div class="modal-content">
+                      <div class="modal-body">
+                          <h2 align="center">Update Student Data</h2>
+                          <div class="mess"></div>
+                          <hr>
+                          <form id="update_student_form" action="" method="POST" enctype="multipart/form-data">
+
+                              <div class="form-group">
+                                  <label for="">Name</label>
+                                  <input type="text" class="form-control" name="name">
+                                  <input type="hidden" name="student_id">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="">Roll</label>
+                                  <input type="text" class="form-control" name="roll">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="">Reg</label>
+                                  <input type="text" class="form-control" name="reg">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="">Board</label>
+                                  <input type="text" class="form-control" name="board">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="">Institute</label>
+                                  <input type="text" class="form-control" name="inst">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="">Examation</label>
+                                  <input type="text" class="form-control" name="exam">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="">Year</label>
+                                  <input type="text" class="form-control" name="year">
+                              </div>
+                              
+                              <div class="form-group">
+                                  <img src="" alt="" style="width: 200px; height: 200px;">
+                                  <input type="hidden" name="old_photo">
+                              </div>
+
+                              <div class="form-group">
+                                  <label for="">photo</label>
+                                  <input type="file" class="form-control" name="new_photo">
+                              </div>
+
+                              <div class="form-group">
+                                  <input type="submit" class="btn btn-info" value="Update" name="update"> 
+                              </div>
+                              
+                          </form>
+                      </div>
+                  </div>
+              </div>
+          </div>
          
            <div class="row">
             <div class="col-sm-12">

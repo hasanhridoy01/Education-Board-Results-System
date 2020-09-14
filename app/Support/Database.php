@@ -94,9 +94,15 @@
       /**
        * Data find Method by Id
        */
-      public function find($id)
+      public function find($tbl, $id)
       {
+        // Data send to table
+        $sql = "SELECT * FROM $tbl WHERE id='$id'" ;
+        $stmt = $this -> connection() -> prepare($sql);
+        $stmt -> execute();
         
+        return $stmt;
+
       }
 
       /**

@@ -60,6 +60,40 @@
        return $data -> fetchAll(PDO::FETCH_ASSOC);
      }
 
+     /**
+      * Show Single Student
+      */
+     public function showData($id)
+     {
+       $data = $this -> find('students', $id);
+       return $data -> fetch(PDO::FETCH_ASSOC);
+     }
+
+     /**
+      * edit Student Method
+      */
+     public function editStudent($id)
+     {
+        $data = $this -> find('students', $id);
+        return $data -> fetch(PDO::FETCH_ASSOC);
+     }
+
+     /**
+      * update Student Method
+      */
+     public function updateStudent($id, $name, $roll, $reg, $board, $inst, $exam, $year, $photo)
+     {  
+        // if ( isset($_FILES['new_photo']) ) {
+        //     //file Upload
+        //      $this -> fileUpload($_FILES('new_photo'), '../../admin/students/', ['jpg', 'png'] ,$photo_name = $photo['file_name']);
+        //   }else{
+        //      $photo_name = $_POST['old_photo'];
+        //   } 
+
+        //Data Update
+        $this -> customQuery("UPDATE students SET name='$name', roll='$roll', reg='$reg', board='$board', inst='$inst', exam='$exam', year='$year' WHERE id='$id' ");
+     }
+
    }
 
 
